@@ -42,7 +42,7 @@ body{
 }
 
 /* Лого */
-.logo{
+.main-nav__logo {
     
     color: var(--primary-text-color);
     font-family: Raleway,sans-serif;
@@ -54,7 +54,7 @@ body{
     text-decoration: none;
 }
 /* ЦВЕТ ЛОГО*/
-.logo__color {
+.main-nav__logo--color {
     color: var(--accent-color);
 }
 /* Лого Футер*/
@@ -165,7 +165,7 @@ position: relative;
     
  }
 
-.contact-list__link {
+.contact__link {
     display: flex;
     flex-direction:row-reverse;
     align-items: center;
@@ -183,13 +183,13 @@ position: relative;
      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   
 }
-.contact-list__mail {
+.contact__mail {
     width: 16px;
     height: 12px;
     margin-right: 10px;
     fill: #757575;
 }
-.contact-list__tel {
+.contact__tel {
     width: 10px;
     height: 16px;
     margin-right: 10px;
@@ -199,12 +199,12 @@ position: relative;
 }
 
 /* HOVER and FOCUS contact-items*/
-.contact-list__link:hover,
-.contact-list__link:focus{
+.contact__link:hover,
+.contact__link:focus{
     color: #2196F3;
     cursor: pointer;
 }
-.contact-list__mail{
+.contact__mail {
     fill: currentColor;
 }
 /*--------END----------*/
@@ -367,7 +367,7 @@ position: relative;
 }
 
 /*ФОРМА ФУТЕРА*/
-.email-form input{
+.form__email input{
     width: 358px;
     height: 50px;
     background-color: #2F303A;
@@ -377,7 +377,7 @@ position: relative;
     margin-right: 12px;
     padding:0;
 }
-.email-form input::placeholder{
+.form__email input::placeholder{
     width: 47px;
     color: rgba(255, 255, 255, 0.6);
     padding-left: 16px;
@@ -387,12 +387,14 @@ position: relative;
      line-height: 1.25;
      letter-spacing: 0.03em;
 }
+
+
 /* ЦВЕТ ТЕКСТА ФОРМЫ ФУТЕРА*/
-.form-text{
+.form__text {
     color:  var(--primary-text-color);
 }
-
-.social-form{
+/* ФОРМА ФУТЕРА */
+.footer-form {
     padding-top: 72px;
     padding-bottom: 94px;
     margin: 0;
@@ -402,8 +404,8 @@ position: relative;
     margin-top: 20px;
     padding: 0;
 }
-
-.avatar {
+/* ОФОРМЛЕНИЕ ЗАГОЛОВКА ФОРМЫ ФУТЕРА*/
+.footer-form__title {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -414,7 +416,7 @@ position: relative;
     margin: 0;
 }
 /*КНОПКА ФУТЕРА*/
-.button-sidebar{
+.form__button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -435,7 +437,7 @@ position: relative;
     line-height: 1.89;
     letter-spacing: 0.06em;  
 }
-.icon-send{
+.form__icon {
     width: 24px;
     height: 24px;
     fill: #FFFFFF;
@@ -445,7 +447,7 @@ position: relative;
 /* FEATURE SECTION*/
 
 /*feature-list*/
-.feature .feature-list__title {
+.feature-list .feature-list__title {
     color: var(--primary-text-color);
     font-weight: 700;
     font-size: 14px;
@@ -458,7 +460,7 @@ position: relative;
    
 }
 
-.feature {
+.feature-list {
     padding:0;
     margin: 0;
     list-style: none;
@@ -469,7 +471,7 @@ position: relative;
     margin-left: -30px ;
 }
 
-.feature .feature-list {
+.feature-list .feature-list__item {
    margin-top: 30px;
    margin-left: 30px;
    flex-basis: calc(100% / 4 - 30px);
@@ -478,7 +480,7 @@ position: relative;
 
  
 /* Псевдоэлемент Иконки item*/
-.feature-list::before {
+.feature-list__item::before {
     content: "";
     display: block;
 
@@ -491,21 +493,21 @@ position: relative;
 
 /* Иконки feature*/
 
-.icon-antenna::before {
+.feature-list__item--antenna::before {
     background-image: url("../images/icon-svg/antenna\ 1.svg");
     
 }
-.icon-clock::before {
+.feature-list__item--clock::before {
     background-image: url("../images/icon-svg/clock\ 1.svg");
 }
-.icon-diagram::before {
+.feature-list__item--diagram::before {
     background-image: url("../images/icon-svg/diagram\ 1.svg");
 }
-.icon-astronaut::before {
+.feature-list__item--astronaut::before {
     background-image: url("../images/icon-svg/astronaut\ 1.svg");
 }
 
-.feature .feature-list__text {
+.feature-list .feature-list__text {
    color:  var(--title-text-color);
    font-weight: 400;
    font-size: 14px;
@@ -931,14 +933,10 @@ position: relative;
     letter-spacing: 0.06em;  
     cursor: pointer;
 
-     
 }
 
-
-
-
-/* Кнопки портфолио*/
-.button{
+/* КНОПКИ ПОРТФОЛИО*/
+.control__button {
     display: inline-block;
     background-color: #F5F4FA;
     color: var(--primary-text-color);
@@ -957,18 +955,16 @@ position: relative;
     transition-property: background-color, color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    
-
 }
 
-.button:hover, 
-.button:focus{
+.control__button:hover, 
+.control__button:focus{
     background-color: var(--accent-color);
     color: var(--secondary-color);
 }
 
 
-/* Project Портфолио*/
+/*PROJECT ПОРТФОЛИО*/
 
 .control{
     list-style: none;
@@ -980,7 +976,7 @@ position: relative;
     padding: 0;
    
 }
-.item-btn:hover {
+.control__item:hover {
     box-shadow: 0px 2px 2px 0px #0000001F;
 
     box-shadow: 0px 1px 2px 0px #00000014;
@@ -990,7 +986,7 @@ position: relative;
     
 
 
-.control .item-btn {
+.control .control__item {
     margin-left: 8px;
    
 }
@@ -998,7 +994,7 @@ position: relative;
    padding: 0;
 }
 
-/* card-set */
+/* CARD_SET */
 
 .card-set{
     padding: 0;
@@ -1011,7 +1007,7 @@ position: relative;
     margin-top: -30px;
 }
 
-.card-text-thumb{
+.card-thumb__text {
     margin: 0;
     position: absolute;
     padding: 63px 24px;
@@ -1037,6 +1033,7 @@ position: relative;
     
 }
 
+
 .card-thumb{
     position: relative;
     overflow: hidden;
@@ -1051,27 +1048,27 @@ position: relative;
 
 /* ПОРТФОЛИО */
 
-.list:hover .card-text-thumb{
+.card-set__list:hover .card-thumb__text {
     transform: translateY(0);
     opacity: 1;
-   
+    
 }
 /* HOVER ТЕНИ*/
-.list{
+.card-set__list {
    
     transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.list:hover{
+.card-set__list:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
      0px 4px 4px rgba(0, 0, 0, 0.06),
      1px 4px 6px rgba(0, 0, 0, 0.16);
     cursor: pointer;
 }
 
-.card-set > .list {
+.card-set > .card-set__list {
   
     flex-basis: calc(100% / 3 - 30px);
     margin-top: 30px;
@@ -1094,7 +1091,7 @@ img {
     max-width: 100%;
     height: auto;
 }
-.list  .text{
+.card-set__list  .card-сontent__text{
     color: var(--title-text-color);
     font-weight: 400;
     font-size: 16px;
@@ -1105,7 +1102,7 @@ img {
     margin-bottom: 0;
 }
 
-.list  .title{
+.card-set__list  .card-сontent__title {
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
