@@ -5,3 +5,4 @@ Cтили дефолтные css:
 
  Cтили по Sass:
  <link rel="stylesheet" href="./css/main.min.css"/>
+ 
