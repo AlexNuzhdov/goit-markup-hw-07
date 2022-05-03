@@ -1294,9 +1294,9 @@ body {
 
 .form-checkbox__checkbox:checked + .form-checkbox__icon {
   background-color: #2196F3;
-  background-image: url(/images/icon-svg/form/icon-check.svg);
+  background-image: url(/images/icon-svg/form/Vector.svg);
   background-size: contain;
-  background-origin: border-box;
+  background-origin: content-box;
   border-color: #2196F3;
 }
 
