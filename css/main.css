@@ -560,7 +560,8 @@ body {
   fill: #AFB1B8;
 }
 
-.social-media__links:hover .social-media__instagram {
+.social-media__links:hover .social-media__instagram,
+.social-media__links:focus .social-media__instagram {
   fill: #FFFFFF;
 }
 
@@ -571,7 +572,8 @@ body {
   fill: #AFB1B8;
 }
 
-.social-media__links:hover .social-media__twiter {
+.social-media__links:hover .social-media__twiter,
+.social-media__links:focus .social-media__twiter {
   fill: #FFFFFF;
 }
 
@@ -582,7 +584,8 @@ body {
   fill: #AFB1B8;
 }
 
-.social-media__links:hover .social-media__facebook {
+.social-media__links:hover .social-media__facebook,
+.social-media__links:focus .social-media__facebook {
   fill: #FFFFFF;
 }
 
@@ -593,7 +596,8 @@ body {
   fill: #AFB1B8;
 }
 
-.social-media__links:hover .social-media__linkedin {
+.social-media__links:hover .social-media__linkedin,
+.social-media__links:focus .social-media__linkedin {
   fill: #FFFFFF;
 }
 
@@ -1289,7 +1293,6 @@ body {
 }
 
 .form-checkbox__checkbox:checked + .form-checkbox__icon {
-  background-color: #2196F3;
   background-image: url(/images/icon-svg/form/check.svg);
   background-size: contain;
   background-origin: border-box;
