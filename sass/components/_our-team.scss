@@ -1,6 +1,6 @@
 /* ПАДИНГИ СЕКЦИИ TEAM*/
 .our-team {
-    background-color: #F5F4FA;
+    background-color: $card-background-color;
     padding-top: 94px;
     padding-bottom: 94px;
 }
@@ -114,62 +114,81 @@
     cursor: pointer;
     padding: 0;
     margin: 0;
-    background-color: #FFFFFF;
+    background-color: $primary-white-color;
 
     transition-property:background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
+    &:hover,
+    &:focus {
+        background-color: $accent-color;  
+    }
+
 }
+
+
 .social-media__instagram {
     padding: 0;
     width: 20px;
     height: 20px;
-    fill:#AFB1B8;
+    fill: $icon-color;
+
+    .social-media__links:hover & {
+     fill: $primary-white-color;
+    }
 
 }
 .social-media__twiter {
     padding: 0;
     width: 20px;
     height: 16.25px;
-    fill:#AFB1B8;
+    fill: $icon-color;
+
+    .social-media__links:hover & {
+      fill: $primary-white-color;
+    }
+    
 }
 
 .social-media__facebook {
     padding: 0;
     width: 10px;
     height: 20px;
-    fill:#AFB1B8;
+    fill: $icon-color;
+
+    .social-media__links:hover & {
+        fill: $primary-white-color;
+    }
 }
 .social-media__linkedin {
     padding: 0;
     width: 20px;
     height: 20px;
-    fill:#AFB1B8;
+    fill: $icon-color;
+
+    .social-media__links:hover & {
+        fill: $primary-white-color;
+    }
 }
 /* HOVER и FOCUS СОЦИАЛЬНОЙ СЕТИ*/
-.social-media__links:hover .social-media__instagram,
-.social-media__links:focus .social-media__instagram{
-    fill: #FFFFFF;      
-}
-.social-media__links:hover .social-media__twiter,
-.social-media__links:focus .social-media__twiter{
-    fill: #FFFFFF;      
-}
-.social-media__links:hover .social-media__facebook,
-.social-media__links:focus .social-media__facebook{
-    fill: #FFFFFF;      
-}
-.social-media__links:hover .social-media__linkedin,
-.social-media__links:focus .social-media__linkedin{
-    fill: #FFFFFF;      
-}
-.social-media__links:hover,
-.social-media__links:focus{
-    background-color: #2196F3;  
-    
-    
-}
+// .social-media__links:hover .social-media__instagram,
+// .social-media__links:focus .social-media__instagram{
+//     fill: $primary-white-color;      
+// }
+// .social-media__links:hover .social-media__twiter,
+// .social-media__links:focus .social-media__twiter{
+//     fill: $primary-white-color;      
+// }
+// .social-media__links:hover .social-media__facebook,
+// .social-media__links:focus .social-media__facebook{
+//     fill: $primary-white-color;      
+// }
+// .social-media__links:hover .social-media__linkedin,
+// .social-media__links:focus .social-media__linkedin{
+//     fill: $primary-white-color;      
+// }
+
 .social-media__icon:not(:last-child) {
     margin-right: 10px;
 }

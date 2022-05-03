@@ -7,7 +7,7 @@ body {
 /* Лого */
 .main-nav__logo {
   color: #212121;
-  font-family: Raleway,sans-serif;
+  font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
@@ -23,7 +23,7 @@ body {
 /* Лого Футер*/
 .logo-footer {
   color: #FFFFFF;
-  font-family: Raleway,sans-serif;
+  font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
@@ -100,8 +100,7 @@ body {
   position: relative;
 }
 
-/* CURRENT SITE-NAV*/
-.site-nav .site-nav__link.site-nav__current {
+.site-nav__link.site-nav__current {
   color: #2196F3;
 }
 
@@ -409,7 +408,7 @@ body {
           justify-content: center;
   background: rgba(47, 48, 58, 0.8);
   position: absolute;
-  bottom: 5px;
+  bottom: 0px;
   width: 370px;
 }
 
@@ -550,11 +549,19 @@ body {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.social-media__links:hover, .social-media__links:focus {
+  background-color: #2196F3;
+}
+
 .social-media__instagram {
   padding: 0;
   width: 20px;
   height: 20px;
   fill: #AFB1B8;
+}
+
+.social-media__links:hover .social-media__instagram {
+  fill: #FFFFFF;
 }
 
 .social-media__twiter {
@@ -564,11 +571,19 @@ body {
   fill: #AFB1B8;
 }
 
+.social-media__links:hover .social-media__twiter {
+  fill: #FFFFFF;
+}
+
 .social-media__facebook {
   padding: 0;
   width: 10px;
   height: 20px;
   fill: #AFB1B8;
+}
+
+.social-media__links:hover .social-media__facebook {
+  fill: #FFFFFF;
 }
 
 .social-media__linkedin {
@@ -578,32 +593,11 @@ body {
   fill: #AFB1B8;
 }
 
+.social-media__links:hover .social-media__linkedin {
+  fill: #FFFFFF;
+}
+
 /* HOVER и FOCUS СОЦИАЛЬНОЙ СЕТИ*/
-.social-media__links:hover .social-media__instagram,
-.social-media__links:focus .social-media__instagram {
-  fill: #FFFFFF;
-}
-
-.social-media__links:hover .social-media__twiter,
-.social-media__links:focus .social-media__twiter {
-  fill: #FFFFFF;
-}
-
-.social-media__links:hover .social-media__facebook,
-.social-media__links:focus .social-media__facebook {
-  fill: #FFFFFF;
-}
-
-.social-media__links:hover .social-media__linkedin,
-.social-media__links:focus .social-media__linkedin {
-  fill: #FFFFFF;
-}
-
-.social-media__links:hover,
-.social-media__links:focus {
-  background-color: #2196F3;
-}
-
 .social-media__icon:not(:last-child) {
   margin-right: 10px;
 }
@@ -688,12 +682,6 @@ body {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* hover и focus постоянные клиенты*/
-.client__button:hover .client__logo,
-.client__button:focus .client__logo {
-  fill: #2196F3;
-}
-
 .client__button:hover {
   border-color: #2196F3;
 }
@@ -710,6 +698,11 @@ body {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.client__button:hover .client__logo,
+.client__button:focus .client__logo {
+  fill: #2196F3;
 }
 
 .client__item:not(:last-child) {
@@ -771,8 +764,7 @@ body {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.aside__item:hover,
-.aside__item:focus {
+.aside__item:hover, .aside__item:focus {
   color: #2196F3;
 }
 
@@ -842,8 +834,7 @@ body {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-icon__button:hover,
-.social-icon__button:focus {
+.social-icon__button:hover, .social-icon__button:focus {
   background-color: #2196F3;
 }
 
@@ -949,7 +940,7 @@ body {
 
 /* ЦВЕТ ТЕКСТА ФОРМЫ ФУТЕРА*/
 .form__text {
-  color: var(--primary-text-color);
+  color: #212121;
 }
 
 /*КНОПКА ФУТЕРА*/
@@ -1065,6 +1056,26 @@ body {
   background-color: #FFFFFF;
 }
 
+.modal__close:hover, .modal__close:focus {
+  fill: #2196F3;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__button:focus .modal__close {
+  fill: #2196F3;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* КНОПКА ФОРМЫ МАЛЕНЬКАЯ*/
 .button-form {
   display: inline-block;
@@ -1091,29 +1102,6 @@ body {
   line-height: 1.89;
   letter-spacing: 0.06em;
   cursor: pointer;
-}
-
-/* ФОКУС МАЛЕНЬКОЙ КНОПКИ*/
-.modal__button:focus .modal__close {
-  fill: #2196F3;
-  -webkit-transition-property: fill;
-  transition-property: fill;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* ХОВЕР КНОПКИ и СКОРОСТЬ ХОВЕРА ЗАКРЫТИЯ */
-.modal__close:hover {
-  fill: #2196F3;
-  cursor: pointer;
-  -webkit-transition-property: fill;
-  transition-property: fill;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* МОДАЛЬНАЯ ФОРМА*/
@@ -1190,7 +1178,7 @@ body {
   font-size: 20px;
   line-height: 1.15;
   letter-spacing: 0.03em;
-  color: var(--primary-text-color);
+  color: #212121;
   padding-top: 40px;
   margin: 0;
 }
@@ -1226,6 +1214,17 @@ body {
           transform: translateX(-50%);
 }
 
+.form-field__input:hover ~ .form-field__person,
+.form-field__input:focus ~ .form-field__person {
+  fill: #2196F3;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .form-field__tel {
   position: absolute;
   width: 18px;
@@ -1234,6 +1233,17 @@ body {
   left: 20px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+.form-field__input:hover ~ .form-field__tel,
+.form-field__input:focus ~ .form-field__tel {
+  fill: #2196F3;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-field__email {
@@ -1246,10 +1256,6 @@ body {
           transform: translate(-50%);
 }
 
-.form-field__input:hover ~ .form-field__person,
-.form-field__input:focus ~ .form-field__person,
-.form-field__input:hover ~ .form-field__tel,
-.form-field__input:focus ~ .form-field__tel,
 .form-field__input:hover ~ .form-field__email,
 .form-field__input:focus ~ .form-field__email {
   fill: #2196F3;
@@ -1447,8 +1453,7 @@ body {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.control__button:hover,
-.control__button:focus {
+.control__button:hover, .control__button:focus {
   background-color: #2196F3;
   color: #FFFFFF;
 }
@@ -1492,12 +1497,6 @@ body {
   cursor: pointer;
 }
 
-.card-set__list:hover .card-thumb__text {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  opacity: 1;
-}
-
 .card-thumb {
   position: relative;
   overflow: hidden;
@@ -1531,6 +1530,12 @@ body {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.card-set__list:hover .card-thumb__text {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
 /* ПАДИНГИ КАРТОЧЕК ПОРТФОЛИО*/
 .card-сontent {
   padding-top: 20px;
@@ -1550,7 +1555,7 @@ body {
 }
 
 .card-set__list .card-сontent__text {
-  color: var(--title-text-color);
+  color: #757575;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.89;

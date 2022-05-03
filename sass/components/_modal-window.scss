@@ -4,7 +4,7 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: $modal-bg-color;
     top: 0;
     left: 0;
     
@@ -24,7 +24,7 @@
 .modal {
     width: 528px;
     height: 581px;
-    background-color: #FFFFFF;
+    background-color: $primary-white-color;
    
     top:50%;
     left:50%;
@@ -48,7 +48,7 @@
    
     top:8px;
     right: 8px;
-    background-color: #FFFFFF;
+    background-color: $primary-white-color;
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -57,8 +57,42 @@
 .modal__close {
     width: 18px;
     height: 18px;
-    background-color: #FFFFFF;
+    background-color: $primary-white-color;
+
+    &:hover,
+    &:focus {
+    fill:$accent-color;
+
+    transition-property:  fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .modal__button:focus & {
+    fill:$accent-color;
+
+    transition-property:  fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
 }
+// /* ФОКУС МАЛЕНЬКОЙ КНОПКИ*/
+// .modal__button:focus .modal__close {
+//     fill:$accent-color;
+//     transition-property:  fill;
+//     transition-duration: 250ms;
+//     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+// }
+//   /* ХОВЕР КНОПКИ и СКОРОСТЬ ХОВЕРА ЗАКРЫТИЯ */
+// .modal__close:hover {
+//     fill:#2196F3;
+//     cursor: pointer;
+//       transition-property:  fill;
+//       transition-duration: 250ms;
+//       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
+// }
+
 /* КНОПКА ФОРМЫ МАЛЕНЬКАЯ*/
 .button-form {
     
@@ -67,7 +101,7 @@
     min-width: 200px;
     height: 50px;
     text-align: center;
-    background-color: #2196F3;
+    background-color: $accent-color;
     color: $primary-white-color;
 
     text-decoration: none;
@@ -85,25 +119,6 @@
     letter-spacing: 0.06em;  
     cursor: pointer;
 
-}
-/* ФОКУС МАЛЕНЬКОЙ КНОПКИ*/
-.modal__button:focus .modal__close {
-    fill:#2196F3;
-    transition-property:  fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-}
-  
-
-/* ХОВЕР КНОПКИ и СКОРОСТЬ ХОВЕРА ЗАКРЫТИЯ */
-.modal__close:hover {
-    fill:#2196F3;
-    cursor: pointer;
-      transition-property:  fill;
-      transition-duration: 250ms;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  
 }
 
 /* МОДАЛЬНАЯ ФОРМА*/
@@ -161,7 +176,7 @@
     font-size: 20px;
     line-height: 1.15;
     letter-spacing: 0.03em;
-    color: var(--primary-text-color);
+    color: $primary-text-color;
     padding-top: 40px;
     margin: 0;
    
@@ -172,7 +187,7 @@
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
-    color: #757575;
+    color: $secondary-text-color;
 }
 .btn-form {
     display: flex;
@@ -184,14 +199,34 @@
 /* ИКОНКИ ФОРМЫ*/
 .form-field__person {
     display: inline-block;
-   position: absolute;
+    position: absolute;
     width: 18px;
     height: 18px;
-
     top: 57%;
     left: 20px;
     transform: translateX(-50%);
+
+    .form-field__input:hover ~ & ,
+    .form-field__input:focus ~ & {
+        fill: $accent-color;
+
+        transition-property:  fill;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
 }
+// .form-field__input:hover ~ .form-field__person,
+// .form-field__input:focus ~ .form-field__person,
+// .form-field__input:hover ~ .form-field__tel,
+// .form-field__input:focus ~ .form-field__tel,
+// .form-field__input:hover ~ .form-field__email,
+// .form-field__input:focus ~ .form-field__email{
+//     fill: #2196F3;
+//     transition-property:  fill;
+//     transition-duration: 250ms;
+//     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+// }
+
 .form-field__tel{
     position: absolute;
     width: 18px;
@@ -200,38 +235,48 @@
     top:57%;
     left: 20px;
     transform: translateX(-50%);
+
+    .form-field__input:hover ~ & ,
+    .form-field__input:focus ~ & {
+        fill: $accent-color;
+        
+        transition-property:  fill;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
    
 }
-.form-field__email{
+.form-field__email {
     position: absolute;
     width: 18px;
     height: 18px;
     top: 57%;
     left: 20px;
     transform: translate(-50%);
+
+    .form-field__input:hover ~ & ,
+    .form-field__input:focus ~ & {
+        fill: $accent-color;
+        
+        transition-property:  fill;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
 }
-.form-field__input:hover ~ .form-field__person,
-.form-field__input:focus ~ .form-field__person,
-.form-field__input:hover ~ .form-field__tel,
-.form-field__input:focus ~ .form-field__tel,
-.form-field__input:hover ~ .form-field__email,
-.form-field__input:focus ~ .form-field__email{
-    fill: #2196F3;
-    transition-property:  fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.form-field__input:hover {
-    border-color: #2196F3;
-    cursor: pointer;
-    transition-property: border-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+.form-field__input {
+    &:hover {
+        border-color: $accent-color;
+        cursor: pointer;
+        transition-property: border-color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
    
 }
 
-
- /* ОФОРМЛЕНИЕ ЧЕКБОКСА*/
+/* ОФОРМЛЕНИЕ ЧЕКБОКСА*/
   .form-checkbox__icon {
     display: inline-block; 
     width: 16px;
@@ -242,11 +287,11 @@
 }
 
 .form-checkbox__checkbox:checked + .form-checkbox__icon {
-    background-color: #2196F3;
+    background-color: $accent-color;
     background-image: url(/images/icon-svg/form/check.svg);
     background-size: contain;
     background-origin: border-box;
-    border-color: #2196F3;
+    border-color: $accent-color;
     
 }
 .form-checkbox {
@@ -275,9 +320,9 @@
 }
 /* ЦВЕТ ТЕКСТА УСЛОВИЙ */
 .text-policy {
-    color: #2196F3;
+    color: $accent-color;
     margin-left: 5px;
-    border-bottom: #2196F3;
+    border-bottom: $accent-color;
     position: relative;
 }
 /*ЛИНИЯ СИНЯЯ*/
@@ -286,7 +331,7 @@
     display: block;
     width: 100%;
     height: 1px;
-    background-color: #2196F3;
+    background-color: $accent-color;
     position: absolute;
     bottom: 4px;
     left:0;
@@ -308,7 +353,7 @@
     min-width: 200px;
     height: 50px;
     text-align: center;
-    background-color: #2196F3;
+    background-color: $accent-color;
     color: $primary-white-color;
 
     text-decoration: none;

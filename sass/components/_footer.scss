@@ -1,5 +1,5 @@
 .footer {
-    background-color: #2F303A;;
+    background-color: $footer-bacground-color;
 }
 /*КОНТКЙНЕР FOOTER*/
 .container {
@@ -47,11 +47,18 @@
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
+    &:hover,
+    &:focus {
+    color: $accent-color;
+    }
+    
+
 }
-.aside__item:hover,
-.aside__item:focus {
-  color: #2196F3;
-}
+// .aside__item:hover,
+// .aside__item:focus {
+//   color: $accent-color;
+// }
+
 .aside__colortext {
    color: $primary-white-color;
 }
@@ -68,7 +75,7 @@
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: $primary-white-color;
     padding: 0;
     margin: 0;
 }
@@ -105,19 +112,24 @@
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
+    &:hover,
+    &:focus {
+    background-color: $accent-color;
+    }
 
 }
- .social-icon__button:hover,
- .social-icon__button:focus{
-    background-color: #2196F3;
+//  .social-icon__button:hover,
+//  .social-icon__button:focus{
+//     background-color: $accent-color;
     
-}
+// }
+
 .social-icon__instagram {
   
     padding: 0;
     width: 20px;
     height: 20px;
-    fill:#FFFFFF;
+    fill:$primary-white-color;
 }
 
 
@@ -126,14 +138,14 @@
     padding: 0;
     width: 20px;
     height: 16.25px;
-    fill:#FFFFFF;
+    fill:$primary-white-color;
  
 }
 .social-icon__facebook {
     padding: 0;
     width: 10px;
     height: 20px;
-    fill:#FFFFFF;
+    fill:$primary-white-color;
    
    
 }
@@ -141,7 +153,7 @@
     padding: 0;
     width: 20px;
     height: 20px;
-    fill:#FFFFFF;
+    fill:$primary-white-color;
 }
 /* ФОРМА ФУТЕРА */
 .footer-form {
@@ -156,7 +168,7 @@
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: $primary-white-color;
     padding: 0;
     margin: 0;
 }
@@ -164,8 +176,8 @@
 .form__email input{
     width: 358px;
     height: 50px;
-    background-color: #2F303A;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: $footer-bacground-color;
+    border: 1px solid $form-input-border-color;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     margin-right: 12px;
@@ -183,7 +195,7 @@
 }
 /* ЦВЕТ ТЕКСТА ФОРМЫ ФУТЕРА*/
 .form__text {
-    color:  var(--primary-text-color);
+    color:  $primary-text-color;
 }
 /*КНОПКА ФУТЕРА*/
 .form__button {
@@ -195,7 +207,7 @@
     margin:0;
     padding: 0;
     
-    background-color: #2196F3;
+    background-color: $accent-color;
     color: $primary-white-color;
 
     text-decoration: none;
@@ -210,7 +222,7 @@
 .form__icon {
     width: 24px;
     height: 24px;
-    fill: #FFFFFF;
+    fill: $primary-white-color;
     margin-left: 10px;
 }
 .form {
